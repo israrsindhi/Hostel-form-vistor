@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bridge Way Boys Hostel Sukkur — Daily Hosteler Form</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+
+  <header class="head">
+    <img src="bridgewayhostel.png" alt="Bridge Way Boys Hostel Logo" class="logo">
+    <div class="head-text">
+      <h1>Bridge Way Boys Hostel</h1>
+      <p>Sukkur &middot; Daily Hosteler Registration</p>
+    </div>
+  </header>
+
+  <form id="hostelForm">
+
+    <div class="section-label">Guest Details</div>
+
+    <div class="field">
+      <label for="fullName">Full Name *</label>
+      <input type="text" id="fullName" name="fullName" required placeholder="e.g. Ali Hassan">
+    </div>
+
+    <div class="field">
+      <label for="fatherName">Father's Name *</label>
+      <input type="text" id="fatherName" name="fatherName" required placeholder="e.g. Muhammad Hassan">
+    </div>
+
+    <div class="row">
+      <div class="field">
+        <label for="cnic">CNIC Number *</label>
+        <input type="text" id="cnic" name="cnic" required placeholder="42201-1234567-1" pattern="[0-9]{5}-[0-9]{7}-[0-9]{1}" title="Format: 42201-1234567-1">
+      </div>
+      <div class="field">
+        <label for="phone">Phone Number *</label>
+        <input type="tel" id="phone" name="phone" required placeholder="03XX-XXXXXXX">
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="address">Permanent Address *</label>
+      <textarea id="address" name="address" rows="2" required placeholder="City, area, house/street"></textarea>
+    </div>
+
+    <div class="field">
+      <label for="emergencyPhone">Emergency Contact Number *</label>
+      <input type="tel" id="emergencyPhone" name="emergencyPhone" required placeholder="03XX-XXXXXXX">
+    </div>
+
+    <div class="section-label">Stay Details</div>
+
+    <div class="row">
+      <div class="field">
+        <label for="checkinDate">Check-in Date *</label>
+        <input type="date" id="checkinDate" name="checkinDate" required>
+      </div>
+      <div class="field">
+        <label for="days">Number of Days *</label>
+        <input type="number" id="days" name="days" min="1" required placeholder="e.g. 1">
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="roomType">Room Preference *</label>
+      <select id="roomType" name="roomType" required>
+        <option value="" disabled selected>Select room type</option>
+        <option value="Shared">Shared Room</option>
+        <option value="Single">Single Room</option>
+        <option value="Dormitory">Dormitory</option>
+      </select>
+    </div>
+
+    <div class="section-label">Verification</div>
+
+    <div class="field">
+      <label for="nicFile">Attach CNIC / NIC (front side) *</label>
+      <input type="file" id="nicFile" name="nicFile" accept="image/*,.pdf" required>
+      <span class="hint">Upload a clear photo or scan (JPG, PNG or PDF, max 5MB)</span>
+      <img id="nicPreview" class="nic-preview" alt="" hidden>
+    </div>
+
+    <button type="submit" id="submitBtn">Submit Registration</button>
+
+    <div id="statusMsg" class="status" role="status"></div>
+
+  </form>
+
+  <footer class="foot">Bridge Way Boys Hostel, Sukkur — Per Day Hosteler Form</footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
