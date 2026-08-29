@@ -5,7 +5,7 @@
       in Google Apps Script (see SETUP-INSTRUCTIONS.md).
    2. Paste the deployment URL below.
    ============================================================ */
-const SCRIPT_URL = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+const SCRIPT_URL = "AKfycbzaVv2MzW2ot-QpJMkyCP-a7cclBa36_mhBBYonu9Pcl2igi-daItyqnL8B5X6WOoHksA";
 
 const form = document.getElementById("hostelForm");
 const submitBtn = document.getElementById("submitBtn");
